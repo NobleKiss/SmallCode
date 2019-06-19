@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KllProgress", "KllProgress\KllProgress.csproj", "{5C1A121B-2F15-452A-A028-0EFACC489B2D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NongLi", "NongLi\NongLi.csproj", "{CE564FF8-D4A3-4E10-B5E7-033795E1ADFC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5C1A121B-2F15-452A-A028-0EFACC489B2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C1A121B-2F15-452A-A028-0EFACC489B2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C1A121B-2F15-452A-A028-0EFACC489B2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE564FF8-D4A3-4E10-B5E7-033795E1ADFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE564FF8-D4A3-4E10-B5E7-033795E1ADFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE564FF8-D4A3-4E10-B5E7-033795E1ADFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE564FF8-D4A3-4E10-B5E7-033795E1ADFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
