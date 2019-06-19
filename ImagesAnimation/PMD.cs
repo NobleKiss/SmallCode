@@ -54,9 +54,7 @@ namespace ImagesAnimation
         {
             string[] img_files = Directory.GetFiles(string.Format("{0}/Images", Application.StartupPath), "*.png");
             foreach (string img_path in img_files)
-            {
                 ls_images.Add(Image.FromFile(img_path));
-            }
             //pb_PicRoll.SizeMode = PictureBoxSizeMode.AutoSize;
             if(ls_images!=null&& ls_images.Count>0)
                 pb_PicRoll.Size = new Size(ls_images[0].Width, ls_images[0].Height);
