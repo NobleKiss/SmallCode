@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KllProgress", "KllProgress\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NongLi", "NongLi\NongLi.csproj", "{CE564FF8-D4A3-4E10-B5E7-033795E1ADFC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImagesAnimation", "ImagesAnimation\ImagesAnimation.csproj", "{6B32C00D-AF8B-46A6-8F6F-D4626F2F92B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{CE564FF8-D4A3-4E10-B5E7-033795E1ADFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE564FF8-D4A3-4E10-B5E7-033795E1ADFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE564FF8-D4A3-4E10-B5E7-033795E1ADFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B32C00D-AF8B-46A6-8F6F-D4626F2F92B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B32C00D-AF8B-46A6-8F6F-D4626F2F92B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B32C00D-AF8B-46A6-8F6F-D4626F2F92B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B32C00D-AF8B-46A6-8F6F-D4626F2F92B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
