@@ -1,7 +1,0 @@
-D:\GitVSCode\SmallCode\NongLi\bin\Debug\NongLi.exe.config
-D:\GitVSCode\SmallCode\NongLi\bin\Debug\NongLi.exe
-D:\GitVSCode\SmallCode\NongLi\bin\Debug\NongLi.pdb
-D:\GitVSCode\SmallCode\NongLi\obj\Debug\NongLi.csproj.CoreCompileInputs.cache
-D:\GitVSCode\SmallCode\NongLi\obj\Debug\NongLi.exe
-D:\GitVSCode\SmallCode\NongLi\obj\Debug\NongLi.pdb
-D:\GitVSCode\SmallCode\NongLi\obj\Debug\NongLi.csprojAssemblyReference.cache
