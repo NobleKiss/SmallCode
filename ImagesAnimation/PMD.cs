@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ImageInDll;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
@@ -126,6 +127,31 @@ namespace ImagesAnimation
         {
             pb_PicRoll2.Image = TransparentImage(Image.FromFile(string.Format("{0}/Images/TOPCenter.png", Application.StartupPath)), fo);
             fo -= 0.1f;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //OutImageCollection outImage = new OutImageCollection();
+            List<Image> imgs = null;// OutImageCollection.SourceImgList; //outImage.GetAllImages();
+            var df = (int)OutImageName.第3张;
+            df.ToString();
+            //var of = (string)OutImageName.第3张;
+            var ddf = OutImageCollection.GetAllImagesName();
+            int prewidth = 0;
+            int preheight = 0;
+            for (int i = 0; i < imgs.Count; i++)
+            {
+                PictureBox pictemp = new PictureBox
+                {
+                    Name = "pic" + i,
+                    Image = imgs[i],
+                    SizeMode = PictureBoxSizeMode.AutoSize,
+                    Location = new Point(prewidth, preheight)
+                };
+                prewidth += pictemp.Width;
+                preheight += pictemp.Height;
+                Controls.Add(pictemp);
+            }
         }
     }
 }
