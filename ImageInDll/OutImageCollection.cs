@@ -13,7 +13,7 @@ namespace ImageInDll
         /// <summary>
         /// 所有图像的初始化
         /// </summary>
-        public static Dictionary<string, Image> SourceImgList { get; } = new Dictionary<string, Image> { { "第一张图片", _1 }, { "这是123", _123 }, { "第3张", _3 }, { "虽然是31但是顺序不是", _31 }, { "Four", _4 }, { "顺序不是45", _45 } };
+        public static Dictionary<string, Image> SourceImgList { get; } = new Dictionary<string, Image> { { "第一张图片", _1 }, { "这是10", _10 }, { "第2张", _2 }, { "虽然是31但是顺序不是", _31 }, { "FourOne", _41 }, { "顺序不是45", _45 }, { "名称是12", _12 }, { "名称是14", _14 }, { "名称是16", _16 }, { "名称是18", _18 }, { "名称是20", _20 }, { "名称是22", _22 }, { "名称是24", _24 }, { "名称是26", _26 }, { "名称是6", _6 }, { "名称是8", _8 } };
         /// <summary>
         /// 返回当前集合中的图像个数
         /// </summary>
