@@ -80,7 +80,8 @@ namespace ConsoleApp1
         static AutoResetEvent Event2 = new AutoResetEvent(false);
         static AutoResetEvent Event3 = new AutoResetEvent(false);
         static AutoResetEvent Event4 = new AutoResetEvent(false);
-        static List<DataTableEx> dtList = new List<DataTableEx>();
+        static List<DataTableEx> dtExList = new List<DataTableEx>();
+        static List<DataTable> dtList = new List<DataTable>();
         static void Main(string[] args)
         {
             //**********************************************************//
@@ -95,9 +96,13 @@ namespace ConsoleApp1
                 DataRow dr = table.NewRow();
                 dr[0] = i;
                 table.Rows.Add(dr);
-                dtList.Add(table);
+                dtExList.Add(table);
+                DataTable dt = table as DataTable;
+                dtList.Add(dt);
             }
-            var orderbytable = from t in dtList orderby t select t;
+            //如果不ToList的话相当于不会执行.
+            var orderbytable = (from t in dtList orderby t select t).ToList();
+            var orderbytableex = from t in dtExList orderby t select t;
             //注意，如果用Table..TableName是可以排序的，因为string类型实现了比对方法.也就是【CompareTo】
             //**********************************************************//
             Console.ReadLine();
