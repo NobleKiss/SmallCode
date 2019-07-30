@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -47,6 +48,28 @@ namespace ConsoleApp1
                 .ConvertUsing<SexConvertert>();
         }
     }
+    public class DataTableEx : DataTable, IComparable<DataTableEx>
+    {
+        public string TableNameEx { get; set; }
+        public DataTableEx(string name):base(name)
+        {
+            TableNameEx = name;
+        }
+
+        public int CompareTo(DataTableEx other)
+        {
+            var A = Convert.ToInt32(TableNameEx.Substring(8));
+            var B = Convert.ToInt32(other.TableNameEx.Substring(8));
+            if (A == B)
+                return 0;
+            if (A > B)
+                return -1;
+            if (A < B)
+                return  1;
+            else
+                return -2;
+        }
+    }
     public class Program
     {
 
@@ -57,8 +80,49 @@ namespace ConsoleApp1
         static AutoResetEvent Event2 = new AutoResetEvent(false);
         static AutoResetEvent Event3 = new AutoResetEvent(false);
         static AutoResetEvent Event4 = new AutoResetEvent(false);
+        static List<DataTableEx> dtList = new List<DataTableEx>();
         static void Main(string[] args)
         {
+            //**********************************************************//
+            //该方法证明了如果没有实现该IComparable接口是无法进行排序的.
+            //因为实现了对比的方法，所以orderby的时候可以进行排序，否则会一直提示错误：必须至少有一个对象实现 IComparable。
+            //
+            for (int i = 0; i < 10; i++)
+            {
+                DataTableEx table = new DataTableEx("biaoming"+i);
+                DataColumn dc = new DataColumn("Id", typeof(int));
+                table.Columns.Add(dc);
+                DataRow dr = table.NewRow();
+                dr[0] = i;
+                table.Rows.Add(dr);
+                dtList.Add(table);
+            }
+            var orderbytable = from t in dtList orderby t select t;
+            //注意，如果用Table..TableName是可以排序的，因为string类型实现了比对方法.也就是【CompareTo】
+            //**********************************************************//
+            Console.ReadLine();
+            //测试增加变量判断所需时间
+            bool IsV = true;
+            System.Diagnostics.Stopwatch stopwatch = new System.Diagnostics.Stopwatch();
+            stopwatch.Start();
+            int num = 0;
+            for (int i = 0; i < 1000; i++)
+                num++;
+            stopwatch.Stop();            
+            var Text = "任务 1 没有bool变量判断 用时：" + stopwatch.ElapsedTicks + " - "+ stopwatch .ElapsedMilliseconds + "毫秒，结果" + num;
+            Console.WriteLine(Text);
+            stopwatch.Reset(); //若没有 Reset，则会把任务 1 的用时累计进入任务 2
+            num = 0;
+            stopwatch.Start();
+            for (int i = 0; i < 1000; i++)
+            {
+                if (IsV)
+                    num++;
+            }
+            stopwatch.Stop();            
+            Text = "任务 2 有bool变量判断 用时：" + stopwatch.ElapsedTicks + " - " + stopwatch.ElapsedMilliseconds + "毫秒，结果" + num;
+            Console.WriteLine(Text);
+            Console.ReadLine();
             //**********************************************************//
             //Mapper.Initialize(x =>
             //{

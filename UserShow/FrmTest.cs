@@ -12,12 +12,20 @@ namespace UserShow
             InitializeComponent();
             TpClose.SetToolTip(pictureBox1, "关闭");
             comboBox1.DataSource = Enum.GetNames(typeof(OutImageName));
+            Image i1 = OutImageCollection.SourceImgList[0];
+            PictureBox pictemp = new PictureBox
+            {
+                Name = "pic",
+                Image = i1,
+                SizeMode = PictureBoxSizeMode.AutoSize,
+            };
+            FlpPicture.Controls.Add(pictemp);
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
             FlpPicture.Controls.Clear();
-            var imgs = OutImageCollection.SourceImgList;
+            var imgs = OutImageCollection.SourceImgDic;
             foreach (var iitem in imgs)
             {
                 PictureBox pictemp = new PictureBox
@@ -78,6 +86,20 @@ namespace UserShow
                 SizeMode = PictureBoxSizeMode.AutoSize,
             };
             FlpPicture.Controls.Add(pictemp);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            //form2.ActMinFrom = new Action(SayHello);
+            form2.ActMinFrom = SayHello;
+            //多播委托
+            form2.ActMinFrom += SayHello;
+            form2.Show();
+        }        
+        public void SayHello()
+        {
+            MessageBox.Show("这是Form1");
         }
     }
 }
