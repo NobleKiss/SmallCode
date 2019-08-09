@@ -70,6 +70,21 @@ namespace ConsoleApp1
                 return -2;
         }
     }
+    public class A
+    {
+        public virtual void MethodA()
+        {
+            Console.WriteLine("这是虚方法A");
+        }
+    }
+    public class B:A
+    {
+        public override void MethodA()
+        {
+            Console.WriteLine("这是B类中的重写方法A");
+            //base.MethodA();
+        }
+    }
     public class Program
     {
 
@@ -84,6 +99,11 @@ namespace ConsoleApp1
         static List<DataTable> dtList = new List<DataTable>();
         static void Main(string[] args)
         {
+            //**********************************************************//
+            //重写虚方法的执行顺序
+            B b = new B();
+            b.MethodA();
+            Console.ReadKey();
             //**********************************************************//
             //该方法证明了如果没有实现该IComparable接口是无法进行排序的.
             //因为实现了对比的方法，所以orderby的时候可以进行排序，否则会一直提示错误：必须至少有一个对象实现 IComparable。
