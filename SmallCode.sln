@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageInDll", "ImageInDll\Im
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserShow", "UserShow\UserShow.csproj", "{C98037BF-2131-4C95-8B18-F5F3CEA592EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiSwagger", "WebApiSwagger\WebApiSwagger.csproj", "{4614DC98-6DA6-4D62-8C6E-DF9912003D62}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{C98037BF-2131-4C95-8B18-F5F3CEA592EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C98037BF-2131-4C95-8B18-F5F3CEA592EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C98037BF-2131-4C95-8B18-F5F3CEA592EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4614DC98-6DA6-4D62-8C6E-DF9912003D62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4614DC98-6DA6-4D62-8C6E-DF9912003D62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4614DC98-6DA6-4D62-8C6E-DF9912003D62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4614DC98-6DA6-4D62-8C6E-DF9912003D62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
